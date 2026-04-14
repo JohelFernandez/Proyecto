@@ -15,7 +15,7 @@ import time
 """
 Colores para la terminal en ANSI
 """
-RESTABLECER = "\033[0m"
+RESETCOLOR = "\033[0m"
 AZUL = "\033[94m"
 VERDE = "\033[92m"
 ROJO = "\033[91m"
@@ -40,6 +40,38 @@ def pausarPantalla():
     """
     system("pause")
 
+"""
+El proposito de las siguientes funciones
+es imprimr mensajes ya sean de error,que todo se verifico con exito
+de informacion y de advertencia
+Recibe de parametro el mensaje(str) que es el mensaje de error,exito,info o
+advertencia a mostrar.
+"""
+
+def imprimirError(mensaje):
+    print(ROJO + " X " + mensaje + RESETCOLOR)
+
+
+def imprimirExito(mensaje):
+    print(VERDE + " ✔ " + mensaje + RESETCOLOR)
+
+def imprimirInfo(mensaje):
+    print(AZUL + " -> " + mensaje + RESETCOLOR)
+
+def imprimirWarning(mensaje):
+    print(AMARILLO + " ⚠ " + mensaje + RESETCOLOR)
+
+def imprimirAnimado(texto):
+    """
+    El proposito de esta funcion es imprimir un texto en la terminal linea
+    por linea con una pausa de 0.3 ms simulando asi una animacion
+
+    Recibe de parametro un texto(str) que lo divide en lineas
+    """
+
+    for linea in texto.split('\n'):
+        print(linea)
+        time.sleep(0.3)
 
 
 
