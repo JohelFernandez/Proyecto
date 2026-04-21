@@ -9,7 +9,7 @@ y ayudas reutilizables
 Para que se vea mas limpio y estetico el programa
 """
 
-from os import system
+from os import system,name
 import time
 
 """
@@ -29,7 +29,10 @@ def limpiarPantalla():
     un menu ordenado y estetico.
     Parametros ninguno y no retorna nada.
     """
-    system("cls")
+    if name == "nt":      
+        system("pause")
+    else:                 
+        input("Presione Enter para continuar...")
 
 def pausarPantalla():
     """
@@ -38,8 +41,7 @@ def pausarPantalla():
     permitiendo leer los resultados antes de volver al menu
     Parametros ninguno y no retorna nada.
     """
-    system("pause")
-
+    input("Presione Enter para continuar...")
 """
 El proposito de las siguientes funciones
 es imprimr mensajes ya sean de error,que todo se verifico con exito
