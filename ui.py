@@ -24,8 +24,19 @@ def mostrarMenuPrincipal():
     print("5. Gestionar seguidores de mis Spaces")
     print("6. Salir")
     
+def pedirOpcion(prompt= " Opcion: "):
+    """Solicita y retorna la opcion ingresada por el usuario
+    en la terminal
 
+    Args:
+        prompt (str, optional): texto del indicador que se muestra antel del
+        cursor de entrada. Defaults to " Opcion: ".
 
+    Retorna:
+        str:La entrada del usuario convertida a minusculas y sin espacios
+        en los extremos
+    """
+    return input(utils.AMARILLO + prompt + utils.RESETCOLOR).strip().lower()
 
 
 

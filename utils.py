@@ -22,8 +22,21 @@ ROJO = "\033[91m"
 AMARILLO = "\033[93m"
 BLANCO = "\033[97m"
 
+'''
+Palabras clave de Python para resaltar
+'''
+PalabrasClavePython = [
+    "False", "None", "True", "and", "as", "assert", "async", "await",
+    "break", "class", "continue", "def", "del", "elif", "else", "except",
+    "finally", "for", "from", "global", "if", "import", "in", "is",
+    "lambda", "nonlocal", "not", "or", "pass", "raise", "return", "self",
+    "super", "try", "while", "with", "yield", "print", "len", "range",
+    "input", "type", "str", "int", "float", "list", "dict", "tuple", "set"
+]
+
 
 def limpiarPantalla():
+    
     """
     El proposito de esta funcion es limpiar la consola para tener
     un menu ordenado y estetico.
@@ -41,7 +54,9 @@ def pausarPantalla():
     permitiendo leer los resultados antes de volver al menu
     Parametros ninguno y no retorna nada.
     """
+    print()
     input("Presione Enter para continuar...")
+    print()
 """
 El proposito de las siguientes funciones
 es imprimr mensajes ya sean de error,que todo se verifico con exito

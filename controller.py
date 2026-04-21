@@ -1,12 +1,16 @@
 #controller.py
 #Realizado por Johel Fernandez y Isaac Esquivel 4/13/2026 10:07PM
 
+import time
 import devspace
 import utils
 import ui
 
 
-def menuPrinci():
+
+
+
+def menuPrincipal():
     """
     Muestra el menu principal y gestiona la opcion que inserto el usuario
     y tambien se mantiene mostrando el menu por un ciclo mientras el usuario usa
